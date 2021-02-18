@@ -52,21 +52,8 @@ const Repository: React.FC = () => {
             console.log(res.data);
             setIssues(res.data);
         })
-        
-    // async function loadData(): Promise<void> {
-    //     const [repository, issues] = await Promise.all([
-    //         await api.get(`repos/${params.repository}`),
-    //         await api.get(`repos/${params.repository}/issues`)
-    //     ]);
-        
-
-    //     console.log("repository", repository);
-    //     console.log("issues", issues);
-    // }
-
-    // loadData();
     
-    }, [])
+    }, [params.repository])
 
 
     return (
